@@ -22,9 +22,6 @@ public class UDPServer extends Thread {
     /** The UDPServer. */
     private static UDPServer instance = new UDPServer();
 
-    /** The Constant IP. */
-    private final String IP = "192.168.1.16";
-
     /** The Constant PORT. */
     private final int PORT = 5555;
 
@@ -69,15 +66,10 @@ public class UDPServer extends Thread {
 
                     log.info("Just received : \"" + receivedMessage + "\"");
                     
-                    /**
-                    String response = NetworkCommunicator.buildResponseForReceivedMessage(receivedMessage);
+                    String response = NetworkCommunicator.executeActionAndBuildResponse(receivedMessage);
                     data.setData(response.getBytes("UTF-8"));
                     socket.send(data);
-                    */
 
-                    /**
-                     * TODO exploit received message
-                     */
                 }
             }
         } catch (IOException e) {

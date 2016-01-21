@@ -22,10 +22,10 @@ public class AuthenticationManager {
 	private static AuthenticationManager instance = new AuthenticationManager();
 
 	/** The salt 1. */
-	public int salt_1;
+	public final int SALT_1 = 384;
 	
 	/** The salt 2. */
-	public int salt_2;
+	public final int SALT_2 = 571;
 	
 	/** The current seed. */
 	public int currentSeed;
@@ -35,12 +35,10 @@ public class AuthenticationManager {
 	
 	/**
 	 * 
-	 * Instantiates a new AuthentificationManager.
+	 * Instantiates a new AuthenticationManager.
 	 *
 	 */
 	private AuthenticationManager() {
-		salt_1 = CryptoManager.generateSeed();
-		salt_2 = CryptoManager.generateSeed();
 	}
 	
 	/**

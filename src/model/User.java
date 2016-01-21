@@ -28,17 +28,8 @@ public class User {
 	/** The password. */
 	private String password;
 	
-	/** The iris shade. */
-	private int irisShade;
-	
-	/** The average R. */
-	private int averageR;
-	
-	/** The average G. */
-	private int averageG;
-	
-	/** The average B. */
-	private int averageB;
+	/** The path. */
+	private String path;
 
 	/**
 	 * 
@@ -121,75 +112,21 @@ public class User {
 	}
 
 	/**
-	 * Gets the irisShade.
+	 * Gets the path.
 	 * 
-	 * @return the irisShade
+	 * @return the path
 	 */
-	public int getIrisShade() {
-		return irisShade;
+	public String getPath() {
+		return path;
 	}
 
 	/**
-	 * Sets the irisShade.
+	 * Sets the path.
 	 * 
-	 * @param irisShade the irisShade to set
+	 * @param path the path to set
 	 */
-	public void setIrisShade(int irisShade) {
-		this.irisShade = irisShade;
-	}
-
-	/**
-	 * Gets the averageR.
-	 * 
-	 * @return the averageR
-	 */
-	public int getAverageR() {
-		return averageR;
-	}
-
-	/**
-	 * Sets the averageR.
-	 * 
-	 * @param averageR the averageR to set
-	 */
-	public void setAverageR(int averageR) {
-		this.averageR = averageR;
-	}
-
-	/**
-	 * Gets the averageG.
-	 * 
-	 * @return the averageG
-	 */
-	public int getAverageG() {
-		return averageG;
-	}
-
-	/**
-	 * Sets the averageG.
-	 * 
-	 * @param averageG the averageG to set
-	 */
-	public void setAverageG(int averageG) {
-		this.averageG = averageG;
-	}
-
-	/**
-	 * Gets the averageB.
-	 * 
-	 * @return the averageB
-	 */
-	public int getAverageB() {
-		return averageB;
-	}
-
-	/**
-	 * Sets the averageB.
-	 * 
-	 * @param averageB the averageB to set
-	 */
-	public void setAverageB(int averageB) {
-		this.averageB = averageB;
+	public void setPath(String path) {
+		this.path = path;
 	}
 	
 	/**
@@ -200,10 +137,7 @@ public class User {
 				+ "seed = " + seed + "\n"
 				+ "login = " + login + "\n"
 				+ "password = " + password + "\n"
-				+ "irisShade = " + irisShade + "\n"
-				+ "averageR = " + averageR + "\n"
-				+ "averageG = " + averageG + "\n"
-				+ "averageB = " + averageB;
+				+ "path = " + path;
 	}
 
 }

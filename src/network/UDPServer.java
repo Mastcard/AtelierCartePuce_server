@@ -26,7 +26,7 @@ public class UDPServer extends Thread {
     private final int PORT = 5555;
 
     /** The Constant BUFFER_SIZE. */
-    private final int BUFFER_SIZE = 32;
+    private final int BUFFER_SIZE = 1024;
 
     /** The buffer. */
     private byte buffer[] = new byte[BUFFER_SIZE];

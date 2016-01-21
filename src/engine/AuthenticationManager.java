@@ -28,7 +28,7 @@ public class AuthenticationManager {
 	public final int SALT_2 = 571;
 	
 	/** The current seed. */
-	public int currentSeed;
+	public int currentSeed = 111; // default value, never used
 	
 	/** The current user. */
 	public User currentUser;

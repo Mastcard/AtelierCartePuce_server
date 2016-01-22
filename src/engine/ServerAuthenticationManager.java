@@ -13,13 +13,13 @@ import model.User;
  * 
  * @author Adrien
  */
-public class AuthenticationManager {
+public class ServerAuthenticationManager {
 
 	/** The log. */
-	private static Logger log = Logger.getLogger(AuthenticationManager.class);
+	private static Logger log = Logger.getLogger(ServerAuthenticationManager.class);
 	
 	/** The instance. */
-	private static AuthenticationManager instance = new AuthenticationManager();
+	private static ServerAuthenticationManager instance = new ServerAuthenticationManager();
 
 	/** The salt 1. */
 	public final int SALT_1 = 384;
@@ -38,7 +38,7 @@ public class AuthenticationManager {
 	 * Instantiates a new AuthenticationManager.
 	 *
 	 */
-	private AuthenticationManager() {
+	private ServerAuthenticationManager() {
 	}
 	
 	/**
@@ -46,7 +46,7 @@ public class AuthenticationManager {
 	 * 
 	 * @return the instance
 	 */
-	public static AuthenticationManager getInstance() {
+	public static ServerAuthenticationManager getInstance() {
 		return instance;
 	}
 	

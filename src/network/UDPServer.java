@@ -64,10 +64,13 @@ public class UDPServer extends Thread {
                 this.receivedMessage = new String(data.getData(), "UTF-8").substring(0, data.getLength());
                 if (receivedMessage.trim().length() > 0) {
 
-                    log.info("Just received : \"" + receivedMessage + "\"");
+                    log.info("Just received : \"" + receivedMessage + "\" from " + data.getAddress().getHostAddress() + ":" + data.getPort());
                     
-                    String response = NetworkCommunicator.executeActionAndBuildResponse(receivedMessage);
+                    String response = ServerCommunicator.executeActionAndBuildResponse(receivedMessage);
                     data.setData(response.getBytes("UTF-8"));
+                    data.setPort(5554);
+                    
+                    log.info("Sending response : " + response);
                     socket.send(data);
 
                 }

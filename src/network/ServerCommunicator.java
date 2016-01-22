@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 import crypto.CryptoManager;
 import crypto.EncodingEnum;
 import data.Jdbcqueries;
-import engine.AuthenticationManager;
+import engine.ServerAuthenticationManager;
 import model.User;
 import util.Constants;
 
@@ -17,13 +17,13 @@ import util.Constants;
  * 
  * @author Adrien
  */
-public class NetworkCommunicator {
+public class ServerCommunicator {
 
 	/** The log. */
-	private static Logger log = Logger.getLogger(NetworkCommunicator.class);
+	private static Logger log = Logger.getLogger(ServerCommunicator.class);
 	
 	/** The authentication manager. */
-	private static AuthenticationManager authenticationManager = AuthenticationManager.getInstance();
+	private static ServerAuthenticationManager authenticationManager = ServerAuthenticationManager.getInstance();
 	
 	/** The user. */
 	private static User user;
@@ -119,6 +119,7 @@ public class NetworkCommunicator {
 					response = Constants.MESSAGE_PREFIX_ADMIN_ADD + " ko";
 				} else {
 					log.debug("Ok for login " + user.getLogin());
+					response = Constants.MESSAGE_PREFIX_ADMIN_ADD + " ok";
 				}
 				break;
 			case Constants.MESSAGE_PREFIX_ADMIN_BIO:
